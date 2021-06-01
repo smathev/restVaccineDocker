@@ -1,6 +1,6 @@
-FROM alpine:latest
+FROM debian:latest
 
-RUN apk add --no-cache xorg-server-xvfb
+RUN apt install xvfe
 
 COPY crontab /crontab
 COPY config.json /config/config.json
