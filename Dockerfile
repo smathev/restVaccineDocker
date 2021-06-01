@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-RUN apk add --update xorg-server-xvfb && rm -rf /var/cache/apk/*
+RUN apk add --update xvfb && rm -rf /var/cache/apk/*
 
 COPY crontab /crontab
 COPY config.json /config/config.json
