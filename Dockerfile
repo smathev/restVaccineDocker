@@ -1,6 +1,6 @@
 FROM debian:latest
 
-RUN apt install xvfe
+RUN apt-get update && apt install xvfe
 
 COPY crontab /crontab
 COPY config.json /config/config.json
