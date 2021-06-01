@@ -1,6 +1,6 @@
-FROM debian:latest
+FROM alpine:latest
 
-RUN apt-get update && apt-get install xfce
+RUN apk add --update xorg-server-xvfb && rm -rf /var/cache/apk/*
 
 COPY crontab /crontab
 COPY config.json /config/config.json
