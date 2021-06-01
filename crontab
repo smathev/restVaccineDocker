@@ -1,1 +1,1 @@
-15 7 * * * python3 /config/vaccine_script.py
+15 7 * * * python3 /config/main.py
