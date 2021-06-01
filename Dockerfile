@@ -1,6 +1,6 @@
 FROM python:3-alpine
 
-RUN pacman -S xorg-server-xvfb
+RUN apk add --update xorg-server-xvfb
 
 COPY crontab /crontab
 COPY config.json /config/config.json
