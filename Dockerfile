@@ -1,9 +1,9 @@
 FROM alpine:latest
 
 #RUN apk add --update xvfb && -rf /var/cache/apk/*
-RUN apk add --update --no-cache python3 xvfb && ln -sf python3 /usr/bin/python && rm -rf /var/cache/apk/*
+RUN apk add --update --no-cache python3 xvfb firefox && ln -sf python3 /usr/bin/python && rm -rf /var/cache/apk/*
 RUN python3 -m ensurepip
-RUN pip3 install --no-cache --upgrade pip setuptools pyvirtualdisplay
+RUN pip3 install --no-cache --upgrade pip setuptools pyvirtualdisplay selenium 
 
 COPY crontab /crontab
 COPY config.json /config/config.json
