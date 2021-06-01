@@ -1,4 +1,4 @@
-FROM python:3-alpine
+FROM alpine:latest
 
 RUN apk add --no-cache xorg-server-xvfb
 
