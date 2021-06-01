@@ -10,6 +10,7 @@
 
 import variables
 import locations
+import chromedriver_py
 
 NAME = variables.NAME
 DOB = variables.DOB

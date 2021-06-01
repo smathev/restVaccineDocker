@@ -2,6 +2,8 @@ FROM python:3-alpine
 
 RUN python -m pip install --upgrade pip
 RUN pip install selenium
+RUN pip install chromedriver-py
+
 
 COPY crontab /crontab
 COPY locations.py /config/locations.py
