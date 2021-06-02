@@ -4,7 +4,7 @@ FROM alpine:latest
 RUN apk add --update --no-cache python xvfb firefox && ln -sf python /usr/bin/python && rm -rf /var/cache/apk/*
 RUN python -m ensurepip
 RUN python -m pip install --upgrade pip
-RUN pip install pip setuptools pyvirtualdisplay selenium webdriver_manager webdriver-manager typing time pathlib email.mime selenium.webdriver.firefox.options webdriver_manager.firefox mail webpages_drivers
+RUN pip install setuptools pyvirtualdisplay selenium webdriver_manager webdriver-manager typing time pathlib email.mime selenium.webdriver.firefox.options webdriver_manager.firefox mail webpages_drivers
 
 RUN pip install --no-cache-dir -r requirements.txt
 
