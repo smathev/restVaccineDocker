@@ -12,9 +12,6 @@ RUN pip install webdriver_manager
 RUN pip install webdriver-manager 
 RUN pip install typing 
 RUN pip install pathlib     
-RUN pip install emails
-RUN pip install email.py
-RUN pip install email
 RUN pip install selenium.webdriver.firefox.options 
 RUN pip install webdriver_manager.firefox 
 RUN pip install mail webpages_drivers
