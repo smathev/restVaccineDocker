@@ -1,6 +1,7 @@
 FROM alpine:latest
 
 #RUN apk add --update xvfb && -rf /var/cache/apk/*
+COPY requirements.txt /config/requirements.txt
 RUN apk add --update --no-cache python3 xvfb firefox && ln -sf python3 /usr/bin/python && rm -rf /var/cache/apk/*
 RUN python -m ensurepip
 RUN python -m pip install --upgrade pip
