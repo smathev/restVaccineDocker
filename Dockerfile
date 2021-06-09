@@ -11,7 +11,6 @@ RUN pip install selenium
 RUN pip install webdriver_manager 
 RUN pip install webdriver-manager 
 RUN pip install typing 
-RUN pip install time 
 RUN pip install pathlib     
 RUN pip install email.mime 
 RUN pip install selenium.webdriver.firefox.options 
