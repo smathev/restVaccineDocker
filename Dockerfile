@@ -15,7 +15,7 @@ RUN pip install typing
 RUN pip install pathlib     
 RUN pip install selenium-firefox
 
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r /config/requirements.txt
 
 COPY crontab /crontab
 COPY config.json /config/config.json
