@@ -1,5 +1,8 @@
-# Automatic subscription to leftover vaccinations in northen jutland
+# Automatic subscription to leftover vaccinations in northen and eastern jutland
 For each config in subs makes a subscription for leftover vaccinations.
+
+Totally and completed based on: https://github.com/asger-weirsoee/rest-vaccine-tilmelder - simply made into a docker, for easier dependency solving.
+Everything is in a docker image, so simply replace the user in subs/user.json with your relevant users, one entry pr. person and replace text in config.json.
 
 ## subs 
 ```json
@@ -25,8 +28,6 @@ Aarhus:
     "date_of_birth": "text dd/mm/yyyy din f\u00f8dselsdato"
 }
 ```
-
-Everything is in a docker image, so simply replace the user in subs/user.json with your relevant users, one entry pr. person and replace text in config.json.
 
 An SMTP server is required to send mail (durh), currently only gmail is supported.
 
