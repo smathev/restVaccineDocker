@@ -12,9 +12,7 @@ RUN pip install webdriver_manager
 RUN pip install webdriver-manager 
 RUN pip install typing 
 RUN pip install pathlib     
-RUN pip install selenium.webdriver.firefox.options 
-RUN pip install webdriver_manager.firefox 
-RUN pip install mail webpages_drivers
+RUN pip install selenium-firefox
 
 RUN pip install --no-cache-dir -r requirements.txt
 
