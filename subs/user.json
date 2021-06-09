@@ -1,8 +1,10 @@
+Aarhus:
 {
-  "name": "Sigurd",
-  "age": "36",
-  "phone": "22944147",
-  "email": "sigurd.mathiasen@gmail.com",
-  "num_on_list": 1,
-  "big_place": "aarhus"
+    "name": "Sigurd Mathiasen",
+    "phone": "22944147",
+    "email": "sigurd.mathiasen@gmail.com",
+    "num_on_list": "0",
+    "big_place": "aarhus",
+    "age": "35",
+    "date_of_birth": "19/10/1985"
 }
