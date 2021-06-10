@@ -30,6 +30,8 @@ RUN pip install selenium-firefox
 
 RUN pip install --no-cache-dir -r /config/requirements.txt
 
+RUN chmod 775 /entry.sh
+
 RUN /usr/bin/crontab /crontab
 
 VOLUME /config
