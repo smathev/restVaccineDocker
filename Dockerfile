@@ -2,7 +2,9 @@ FROM alpine:latest
 
 RUN apk add --update --no-cache git python3 xvfb firefox && ln -sf python3 /usr/bin/python && rm -rf /var/cache/apk/*
 
-                                                                            WORKDIR "/config"
+RUN apk add git
+
+WORKDIR "/config"
 git init .
 git remote add origin https://github.com/asger-weirsoee/rest-vaccine-tilmelder
 git checkout master
