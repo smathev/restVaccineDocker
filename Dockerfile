@@ -10,7 +10,7 @@ RUN apk add git
 
 WORKDIR "/config"
 RUN git init .
-RUN git remote add origin https://github.com/asger-weirsoee/rest-vaccine-tilmelder
+RUN git remote add origin "https://github.com/asger-weirsoee/rest-vaccine-tilmelder"
 RUN git remote update
 RUN git fetch
 RUN git checkout -b master
