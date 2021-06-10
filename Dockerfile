@@ -8,7 +8,7 @@ RUN apk add --update --no-cache git python3 xvfb firefox && ln -sf python3 /usr/
 
 RUN apk add git
 
-WORKDIR "/config"
+WORKDIR /config
 RUN git init .
 RUN git remote add origin "https://github.com/asger-weirsoee/rest-vaccine-tilmelder"
 RUN git remote update
