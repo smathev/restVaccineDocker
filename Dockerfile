@@ -2,6 +2,8 @@ FROM alpine:latest
 
 RUN mkdir /config
 
+VOLUME /config
+
 RUN apk add --update --no-cache git python3 xvfb firefox && ln -sf python3 /usr/bin/python && rm -rf /var/cache/apk/*
 
 RUN apk add git
