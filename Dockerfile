@@ -1,13 +1,14 @@
 FROM alpine:latest
 
-WORKDIR "/config"
+RUN apk add --update --no-cache git python3 xvfb firefox && ln -sf python3 /usr/bin/python && rm -rf /var/cache/apk/*
+
+                                                                            WORKDIR "/config"
 git init .
 git remote add origin https://github.com/asger-weirsoee/rest-vaccine-tilmelder
 git checkout master
 
 #RUN apk add --update xvfb && -rf /var/cache/apk/*
-COPY requirements.txt /config/requirements.txt
-RUN apk add --update --no-cache git python3 xvfb firefox && ln -sf python3 /usr/bin/python && rm -rf /var/cache/apk/*
+#COPY requirements.txt /config/requirements.txt
 RUN python -m ensurepip
 RUN python -m pip install --upgrade pip
 #RUN pip install setuptools pyvirtualdisplay selenium webdriver_manager webdriver-manager typing time pathlib email.mime selenium.webdriver.firefox.options webdriver_manager.firefox mail webpages_drivers
