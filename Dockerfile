@@ -8,6 +8,8 @@ RUN apk add --update --no-cache git python3 xvfb firefox && ln -sf python3 /usr/
 RUN apk add git
 
 WORKDIR /config
+COPY git_installer.sh /config/
+
 RUN git init .
 RUN ls -a /config
 RUN git remote add origin https://github.com/asger-weirsoee/rest-vaccine-tilmelder
@@ -33,7 +35,5 @@ RUN pip install --no-cache-dir -r /config/requirements.txt
 RUN chmod 775 /entry.sh
 
 RUN /usr/bin/crontab /crontab
-
-VOLUME /config
 
 CMD ["/entry.sh"]
