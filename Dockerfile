@@ -1,5 +1,8 @@
 FROM alpine:latest
 
+COPY crontab /crontab
+COPY entry.sh /entry.sh
+
 RUN apk add --update --no-cache git python3 xvfb firefox && ln -sf python3 /usr/bin/python && rm -rf /var/cache/apk/*
 
 RUN apk add git
@@ -27,9 +30,6 @@ RUN pip install selenium-firefox
 
 RUN pip install --no-cache-dir -r /config/requirements.txt
 
-COPY crontab /crontab
-
-COPY entry.sh /entry.sh
 RUN /usr/bin/crontab /crontab
 
 VOLUME /config
