@@ -14,6 +14,7 @@ RUN git remote add origin https://github.com/asger-weirsoee/rest-vaccine-tilmeld
 RUN git remote update
 RUN git fetch
 RUN git checkout -b master
+RUN git pull origin master
 
 #RUN apk add --update xvfb && -rf /var/cache/apk/*
 #COPY requirements.txt /config/requirements.txt
