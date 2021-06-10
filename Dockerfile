@@ -5,9 +5,9 @@ RUN apk add --update --no-cache git python3 xvfb firefox && ln -sf python3 /usr/
 RUN apk add git
 
 WORKDIR "/config"
-git init .
-git remote add origin https://github.com/asger-weirsoee/rest-vaccine-tilmelder
-git checkout master
+RUN git init .
+RUN git remote add origin https://github.com/asger-weirsoee/rest-vaccine-tilmelder
+RUN git checkout master
 
 #RUN apk add --update xvfb && -rf /var/cache/apk/*
 #COPY requirements.txt /config/requirements.txt
