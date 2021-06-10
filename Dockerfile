@@ -8,7 +8,7 @@ RUN apk add --update --no-cache git python3 xvfb firefox && ln -sf python3 /usr/
 
 RUN apk add git
 
-#COPY git_installer.sh /config/git_installer.sh
+COPY git_installer.sh /config/git_installer.sh
 WORKDIR /config
 RUN sh git_installer.sh
 #RUN git init .
