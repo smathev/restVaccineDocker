@@ -3,14 +3,14 @@ FROM alpine:latest
 COPY crontab /crontab
 COPY entry.sh /entry.sh
 
-COPY git_installer.sh /config/
+COPY git_installer.sh /tmp/
 
 RUN apk add --update --no-cache git python3 xvfb firefox && ln -sf python3 /usr/bin/python && rm -rf /var/cache/apk/*
 
 RUN apk add git
 
-WORKDIR /config
-RUN sh /config/git_installer.sh
+WORKDIR /tmp
+RUN sh /tmp/git_installer.sh
 #RUN git init .
 #RUN ls -a /config
 #RUN git remote add origin https://github.com/asger-weirsoee/rest-vaccine-tilmelder

@@ -1,7 +1,9 @@
 #!/bin/sh
 
 sleep 5
-sh /config/git_installer.sh
+mv /tmp/* /config/
+
+#sh /config/git_installer.sh
 
 sleep 20
 # run script
